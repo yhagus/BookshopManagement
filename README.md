@@ -6,13 +6,13 @@ Without database
 
 # IDE: Visual Studio 2019
 =>Overall - 8%
-
+1. Ad
 1. Admin Login - 80%<br>
 2. Member Login - 80%<br>
 3. Register Member - 0%<br>
 4  Dashboard Admin - 0%<br>
 5  Dashboard Member - 0%<br>
-6  Admin CRUD - 0%_<br>
+6  Admin CRUD - 0%<br>
 7  Continue without login - 0% <br>
 8  Book list (user & non user) - 0% <br>
 9  Book list (admin) - 0%<br>
