@@ -35,6 +35,7 @@ public:
 				cout << "\tLogin success" << endl;
 				ReadKey();
 				loop = 1;
+				
 				//
 			}
 			//
