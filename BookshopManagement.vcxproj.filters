@@ -26,16 +26,13 @@
     <ClInclude Include="headers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="admin.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="member.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="users.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="interfaces.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="books.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

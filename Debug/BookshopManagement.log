@@ -1,2 +1,3 @@
 ﻿  BookshopManagement.cpp
+D:\Users\bagusp\source\repos\BookshopManagement\BookshopManagement.cpp(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   BookshopManagement.vcxproj -> D:\Users\bagusp\source\repos\BookshopManagement\Debug\BookshopManagement.exe

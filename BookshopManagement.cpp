@@ -1,11 +1,9 @@
 // BookshopManagement.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include "centered.h"
-#include "users.h"
 #include "headers.h"
-#include "admin.h"
-#include "member.h"
+#include "interfaces.h";
+#include "users.h"
 
 using namespace std;
 
@@ -31,13 +29,14 @@ int main()
     string password;
     //
     //
-
+    enum option { ADMIN = '1', MEMBER = '2', UNREGISTERED = '3' };
+    //
     //Program Start
     //
     //
     char pilihan;
-    while (1) {
-
+    while (1)
+    {
         do {
             system("CLS");
             cout << "\n\n";
@@ -48,10 +47,11 @@ int main()
             cout << "\tPilihan [1-3] : ";
             cin >> pilihan;
             //
+            
             //
             switch (pilihan) {
 
-            case '1':
+            case ADMIN:
                 //LOG IN AS ADMIN
                 //
                 //
@@ -59,14 +59,14 @@ int main()
                 admin.login(username, password);
                 break;
 
-            case '2':
+            case MEMBER:
                 //LOGIN AS MEMBER
                 //
                 //
                 //
                 member.login(username, password);
                 break;
-            case '3':
+            case UNREGISTERED:
                 //CONTINUE WITHOUT LOGIN
                 //
                 //
@@ -76,9 +76,7 @@ int main()
             default:
                 break;
             }
-
-
-        } while (!(pilihan == '1' || pilihan == '2' || pilihan == '3'));
+        } while (!(pilihan == ADMIN || pilihan == MEMBER || pilihan == UNREGISTERED));
     }
 }
 

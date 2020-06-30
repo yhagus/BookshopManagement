@@ -142,11 +142,10 @@
     <ClCompile Include="BookshopManagement.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="admin.h" />
+    <ClInclude Include="books.h" />
     <ClInclude Include="centered.h" />
     <ClInclude Include="headers.h" />
     <ClInclude Include="interfaces.h" />
-    <ClInclude Include="member.h" />
     <ClInclude Include="users.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
