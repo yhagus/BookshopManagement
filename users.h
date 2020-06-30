@@ -7,11 +7,19 @@ AdminInterface adminInterface;
 class Users
 {
 public:
-	string adminId[6] = { "bagus" };
-	string adminPassword[6] = { "123" };
+	string adminId[6] = { 
+		"admin"
+	};
+	string adminPassword[6] = { 
+		"123" 
+	};
 
-	string memberId[25] = { "member" };
-	string memberPassword[25] = { "member" };
+	string memberId[25] = { 
+		"member" };
+	string memberPassword[25] = { 
+		"member" 
+	};
+
 } user;
 
 class Member
@@ -24,15 +32,15 @@ public:
 		cout << "\n\n";
 		cout << "\tLogin sebagai member" << endl << endl;
 		cout << "\tUsername\t: ";
-		cin >> a;
+		cin >> a;cin.ignore();
 		cout << "\tPassword\t: ";
-		cin >> b;
+		cin >> b;cin.ignore();
 
 		for (int i = 0; i < sizeof(user.adminId); i++) {
 			//
 			//
 			if (a == user.memberId[i] && b == user.memberPassword[i]) {
-				cout << "\tLogin success" << endl;
+				cout << "\tLogin success" << endl << endl;
 				ReadKey();
 				loop = 1;
 				
@@ -57,8 +65,8 @@ public:
 	void withoutLogin()
 	{
 		cout << "\n\n";
-		cout << "\tSuccess without logged in" << endl;
-		system("PAUSE");
+		cout << "\tSuccess without logged in" << endl << endl;
+		ReadKey();
 	}
 };
 
@@ -73,9 +81,9 @@ public:
 		cout << "\n\n";
 		cout << "\tLogin sebagai admin" << endl << endl;
 		cout << "\tUsername\t: ";
-		cin >> a;
+		cin >> a;cin.ignore();
 		cout << "\tPassword\t: ";
-		cin >> b;
+		cin >> b;cin.ignore();
 
 		for (int i = 0; i < sizeof(user.adminId); i++) {
 			//
@@ -93,7 +101,7 @@ public:
 			cout << "\tIncorrect username or password" << endl << endl;
 			cout << "\tReply 1 to try again : ";
 			char reply;
-			cin >> reply;
+			cin >> reply;cin.ignore();
 			if (reply == '1') {
 				login(a, b);
 			}

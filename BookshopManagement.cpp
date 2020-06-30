@@ -45,7 +45,7 @@ int main()
             cout << "\t2. Login sebagai member" << endl;
             cout << "\t3. Masuk tanpa login" << endl << endl;
             cout << "\tPilihan [1-3] : ";
-            cin >> pilihan;
+            cin >> pilihan;cin.ignore();
             //
             
             //
