@@ -1,7 +1,6 @@
 # Bookshop Management
 
-Final Project C++
-Command Line Interface
+# Final Project C++ Command Line Interface
 
 # IDE: Visual Studio 2019
 
