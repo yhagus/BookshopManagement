@@ -32,5 +32,8 @@
     <ClInclude Include="interfaces.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="books.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

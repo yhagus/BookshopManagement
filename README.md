@@ -8,10 +8,12 @@
 
 # Struct -- 100% (data buku)
 
-# Sorting -- 0%
+# Sorting -- 100% (ascending)
 
-# Searching -- 0%
+# Searching -- 100%
 
-# Stack / Queue -- 0%
+# Stack/Queue -- 50% (?? gapaham asw)
 
-# Linked List -- 50% (add, delete)
+# Linked List -- 75% (add, delete, read)
+
+# Beli barang -- 0% (ngurangi stock)

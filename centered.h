@@ -1,5 +1,4 @@
 #pragma once
-#include "headers.h"
 
 template<typename charT, typename traits = std::char_traits<charT> >
 class center_helper {

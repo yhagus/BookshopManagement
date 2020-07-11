@@ -4,14 +4,16 @@
 using namespace std;
 
 AdminInterface adminInterface;
+MemberInterface memberInterface;
+
 class Users
 {
 public:
 	string adminId[6] = { 
-		"admin"
+		"admin", "bagus"
 	};
 	string adminPassword[6] = { 
-		"123" 
+		"123" , "bagus"
 	};
 
 	string memberId[25] = { 
@@ -25,6 +27,7 @@ public:
 class Member
 {
 public:
+	char getOptionMember;
 	void login(string a, string b)
 	{
 		int loop = 0;
@@ -42,6 +45,7 @@ public:
 			if (a == user.memberId[i] && b == user.memberPassword[i]) {
 				cout << "\tLogin success" << endl << endl;
 				ReadKey();
+				memberInterface.MemberDashboard(getOptionMember);
 				loop = 1;
 				
 				//
@@ -60,13 +64,6 @@ public:
 				ReadKey();
 			}
 		}
-	}
-
-	void withoutLogin()
-	{
-		cout << "\n\n";
-		cout << "\tSuccess without logged in" << endl << endl;
-		ReadKey();
 	}
 };
 

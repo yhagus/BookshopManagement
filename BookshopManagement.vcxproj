@@ -142,6 +142,7 @@
     <ClCompile Include="BookshopManagement.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="books.h" />
     <ClInclude Include="centered.h" />
     <ClInclude Include="headers.h" />
     <ClInclude Include="interfaces.h" />
