@@ -12,7 +12,7 @@
 
 # Searching -- 100%
 
-# Stack/Queue -- 50% (?? gapaham asw)
+# Stack/Queue -- 0%
 
 # Linked List -- 75% (add, delete, read)
 
