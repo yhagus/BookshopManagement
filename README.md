@@ -20,13 +20,16 @@
 
 # Login list
 
-AdminID1 : admin
-Password1: admin
+AdminID1      : admin
+
+PasswordAdmin1: admin
 
 MemberID01 : member
+
 Password01 : member
 
 MemberID02 : bagus
+
 MemberID02 : 2678
 
 # How to add member or admin
