@@ -12,8 +12,23 @@
 
 # Searching -- 100%
 
-# Stack/Queue -- 0%
+# Stack/Queue -- 100% (add & clear riwayat pembeli)
 
-# Linked List -- 75% (add, delete, read)
+# Linked List -- 100% (add, delete, read)
 
-# Beli barang -- 0% (ngurangi stock)
+# Beli barang -- 100%
+
+# Login list
+
+AdminID1 : admin
+Password1: admin
+
+MemberID01 : member
+Password01 : member
+
+MemberID02 : bagus
+MemberID02 : 2678
+
+# How to add member or admin
+- open users.h
+- edit admin or member

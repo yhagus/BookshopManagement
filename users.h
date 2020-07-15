@@ -10,16 +10,16 @@ class Users
 {
 public:
 	string adminId[6] = { 
-		"admin", "bagus"
+		"admin"
 	};
 	string adminPassword[6] = { 
-		"123" , "bagus"
+		"admin"
 	};
 
 	string memberId[25] = { 
-		"member" };
+		"member","bagus" };
 	string memberPassword[25] = { 
-		"member" 
+		"member","2679"
 	};
 
 } user;
@@ -45,7 +45,7 @@ public:
 			if (a == user.memberId[i] && b == user.memberPassword[i]) {
 				cout << "\tLogin success" << endl << endl;
 				ReadKey();
-				memberInterface.MemberDashboard(getOptionMember);
+				memberInterface.MemberDashboard(getOptionMember, a);
 				loop = 1;
 				
 				//

@@ -19,7 +19,7 @@ int main()
     //CLASS
     Admin admin;
     Member member;
-    
+   
     //VARIABLES
     //
     //
@@ -33,6 +33,14 @@ int main()
     //Program Start
     //
     //
+    insert(&head, "Habis Gelap Terbitlah Terang", 50000);
+    insert(&head, "Tips & Trick Penguasa Algoritma", 75000);
+    insert(&head, "Structure Data Algorithm", 55000);
+
+    input("Bagus Pranowo");
+    input("Akmal Jawsund");
+    input("Erwin Syahrul");
+  
     char pilihan;
     while (1)
     {
@@ -70,11 +78,12 @@ int main()
                 //
                 //
                 //
+                cout << "\tAnda memilih masuk tanpa login" << endl << endl;
                 memberInterface.TampilanBuku();
                 break;
             default:
                 break;
             }
-        } while (!(pilihan == ADMIN || pilihan == MEMBER || pilihan == UNREGISTERED));
+        } while (1);
     }
 }

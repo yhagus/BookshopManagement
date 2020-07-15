@@ -1,12 +1,13 @@
 #pragma once
 #include "headers.h"
+#include "queue.h"
 using namespace std;
 struct Node {
 	string name;
 	int data;
 	struct Node* next;
 };
-
+Node* head = NULL;
 void sortedInsert(struct Node**, struct Node*);
 
 void insert(struct Node** head_ref, string newName, int newData)
@@ -47,10 +48,14 @@ void deleteNode(struct Node** node_ref, string keyName)
 		temp = temp->next;
 	}
 
-	if (temp == NULL)return;
+	if (temp == NULL) {
+		cout << "\n\tBuku " << keyName << " tidak ditemukan" << endl;
+		return;
+	}
 
 	temp2->next = temp->next;
 
+	cout << "\n\tBuku " << keyName << " telah dihapus dari daftar" << endl;
 	free(temp);
 }
 
@@ -58,9 +63,9 @@ void show(struct Node* node)
 {
 	system("CLS");
 	int i=1;
-	cout << endl << "\t\t Judul Buku" << "\t\tStock" << endl << endl;
+	cout << endl << "\t\t Judul Buku\n\t\t-------------" << endl << endl;
 	while (node != NULL) {
-		cout << "   " << i << "\t\t" << node->name << "\t\t\t" << node->data << "\n\n";
+		cout << "   " << i << "\t\t" << node->name << "\t\t\t\tRp. " << node->data << "\n\n";
 		node = node->next;
 		i++;
 	}
@@ -75,7 +80,7 @@ bool search(struct Node* search_node, string searchName)
 			cout << "\n\n";
 			cout << "\tPencarian buku ditemukan!" << endl << endl;
 			cout << "\tNama Buku\t: " << current->name << endl;
-			cout << "\tStock\t\t: " << current->data << endl;
+			cout << "\tHarga\t\t: " << current->data << endl;
 
 			return true;
 		}
@@ -116,4 +121,22 @@ void sortedInsert(struct Node** head_ref, struct Node* new_node)
 		current->next = new_node;
 	}
 }
-Node* head = NULL;
+
+bool pembayaran(struct Node* search_node, string ordererName, string searchName)
+{
+	struct Node* current = search_node;
+	while (current != NULL) {
+		if (current->name == searchName) {
+			cout << endl;
+			cout << "\tNama Pemesan\t\t: " << ordererName << endl;
+			cout << "\tNama Buku Pesanan\t: " << current->name << endl;
+			cout << "\tHarga\t\t\t: " << current->data << endl;
+			cout << "\n\tSilakan lanjut membayar ke tempat pembayaran" << endl;
+			input(ordererName);
+			return true;
+		}
+		current = current->next;
+	}
+	cout << "\n\tBuku tidak ditemukan" << endl;
+	return false;
+}
