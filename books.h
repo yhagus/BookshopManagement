@@ -2,9 +2,10 @@
 #include "headers.h"
 #include "queue.h"
 using namespace std;
+
 struct Node {
 	string name;
-	int data;
+	double data;
 	struct Node* next;
 };
 Node* head = NULL;
@@ -80,7 +81,7 @@ bool search(struct Node* search_node, string searchName)
 			cout << "\n\n";
 			cout << "\tPencarian buku ditemukan!" << endl << endl;
 			cout << "\tNama Buku\t: " << current->name << endl;
-			cout << "\tHarga\t\t: " << current->data << endl;
+			cout << "\tHarga\t\t: Rp. " << current->data << endl;
 
 			return true;
 		}
@@ -122,7 +123,27 @@ void sortedInsert(struct Node** head_ref, struct Node* new_node)
 	}
 }
 
-bool pembayaran(struct Node* search_node, string ordererName, string searchName)
+bool pembayaranMember(struct Node* search_node, string ordererName, string searchName, double discount)
+{
+	struct Node* current = search_node;
+	while (current != NULL) {
+		if (current->name == searchName) {
+			discount = (current->data / 15); //diskon 15%
+			cout << endl;
+			cout << "\tNama Pemesan\t\t: " << ordererName << endl;
+			cout << "\tNama Buku Pesanan\t: " << current->name << endl;
+			cout << "\tHarga (Diskon 15%)\t: Rp. " << (current->data - discount) << endl;
+			cout << "\n\tSilakan lanjut membayar ke tempat pembayaran" << endl;
+			input(ordererName);
+			return true;
+		}
+		current = current->next;
+	}
+	cout << "\n\tBuku tidak ditemukan" << endl;
+	return false;
+}
+
+bool pembayaranNonMember(struct Node* search_node, string ordererName, string searchName)
 {
 	struct Node* current = search_node;
 	while (current != NULL) {

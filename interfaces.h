@@ -87,7 +87,6 @@ class MemberInterface
 {
 public:
 	void TampilanBuku() {
-
 		char unregisteredChoice;
 		char unregisteredChoice2;
 		do {
@@ -129,7 +128,7 @@ public:
 						getline(cin, namaPemesan);
 						cout << "\tNama buku yang anda pesan: ";
 						getline(cin, orderBookname);
-						pembayaran(head, namaPemesan, orderBookname);
+						pembayaranNonMember(head, namaPemesan, orderBookname);
 						ReadKey();
 						break;
 					case '0':
@@ -168,6 +167,7 @@ public:
 					cout << "\tPilihan anda [1-0] : ";
 					cin >> unregisteredChoice2;cin.ignore();
 					string searchBookName, orderBookname;
+					double diskon = 0;
 					switch (unregisteredChoice2) {
 					case '1':
 						sortData(&head);
@@ -186,7 +186,7 @@ public:
 						cout << endl;
 						cout << "\tNama buku yang anda pesan: ";
 						getline(cin, orderBookname);
-						pembayaran(head, namaPemesan, orderBookname);
+						pembayaranMember(head, namaPemesan, orderBookname,diskon);
 						ReadKey();
 						break;
 					case '0':

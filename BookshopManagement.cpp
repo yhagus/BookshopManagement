@@ -14,7 +14,8 @@ int main()
     width = csbi.srWindow.Right - csbi.srWindow.Left + 1;
     height = csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
     //
-
+    cout.precision(0);
+    cout.setf(ios::fixed);
 
     //CLASS
     Admin admin;
